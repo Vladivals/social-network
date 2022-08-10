@@ -1,9 +1,13 @@
+import { stopSubmit } from "redux-form";
 import { profileAPI, userAPI } from "../api/api";
 
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 const ADD_POST = "ADD-POST";
 const SET_USER_PROFILE = "SET-USER-PROFILE";
 const SET_STATUS = "SET_STATUS";
+const SAVE_PHOTO_SUCCESS = "SAVE_PHOTO_SUCCESS"
+const SAVE_PROFILE_SUCCESS = "SAVE_PROFILE_SUCCESS"
+
 
 let initialState = {
   posts: [
@@ -45,6 +49,20 @@ export const profileReducer = (state = initialState, action) => {
         status: action.status,
       };
     }
+
+    case SAVE_PHOTO_SUCCESS: {
+      return {
+        ...state,
+        profile: {...state.profile, photos: action.photos},
+      };
+    }
+    case SAVE_PROFILE_SUCCESS: {
+      return {
+        ...state,
+        profile: {...state.profile, profile: action.profile},
+      };
+    }
+
     default:
       return state;
   }
@@ -73,6 +91,20 @@ export const setStatus = (status) => {
   };
 };
 
+export const savePhotoSuccess = (photos) => {
+  return {
+    type: SAVE_PHOTO_SUCCESS,
+    photos,
+  };
+};
+
+export const saveProfileSuccess = (profile) => {
+  return {
+    type: SAVE_PROFILE_SUCCESS,
+    profile,
+  };
+};
+
 export const getUserProfile = (userId) => async (dispatch) => {
   let response = await userAPI.getProfile(userId)
   
@@ -95,5 +127,29 @@ export const updateStatus = (status) => async (dispatch) => {
     }
   
 };
+
+export const savePhoto = (file) => async (dispatch) => {
+  let response = await profileAPI.savePhoto(file)
+    if (response.data.resultCode === 0) {
+      dispatch(savePhotoSuccess(response.data.photos));
+      
+    }
+  
+};
+
+export const saveProfile = (profile) => async (dispatch, getState) => {
+  const userId = getState().auth.userId;
+  let response = await profileAPI.saveProfile(profile)
+    if (response.data.resultCode === 0) {
+      dispatch(getUserProfile(userId));
+      
+    } else {
+      dispatch(stopSubmit("edit-profile", { _error: response.data.messages }));
+      return Promise.reject(response.data.messages);
+    }
+  
+};
+
+
 
 export default profileReducer;
