@@ -4,7 +4,7 @@
 
   .header {
     grid-area: h;
-    background-color: green;
+    background-color: #060b26;
   }
 
   .loginBlock {

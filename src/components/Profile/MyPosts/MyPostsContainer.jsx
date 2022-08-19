@@ -9,6 +9,7 @@ let mapStateToProps = (state) => {
   return {
     posts: state.profileReducer.posts,
     newPostText: state.profileReducer.newPostText,
+    profile: state.profileReducer.profile,
   };
 };
 

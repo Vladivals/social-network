@@ -1,5 +1,8 @@
 import React from "react";
 import s from "./Post.module.css";
+import likeImg from "../../../../assets/images/like.png";
+import userPhoto from "../../../../assets/images/user.png";
+
 
 const Post = (props) => {
 
@@ -10,11 +13,14 @@ const Post = (props) => {
   return (
     <div>
       <div className={s.item}>
-        <img src="https://tse3.mm.bing.net/th?id=OIP.dQqhbTIZRbyncab04A69JAHaFj&pid=Api&P=0&w=234&h=175"></img>
+        <img src={userPhoto }></img>
         {props.message};
       </div>
       <div>
-        <span>like{props.likeQuantity}</span>
+        <div className={s.like}>
+          <img src={likeImg} /> 
+          {props.likesCount}
+          </div>
         
       </div>
     </div>

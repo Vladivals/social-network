@@ -8,9 +8,9 @@ let store = {
   _state: {
     profilePage: {
       posts: [
-        { id: 1, message: "Hifdgdf", likesCount: 12 },
-        { id: 2, message: "Yodfgdf", likesCount: 15 },
-        { id: 3, message: "Nihaodfgdf", likesCount: 5 },
+        { id: 1, message: "Vlad", likesCount: 12 },
+        { id: 2, message: "Vlad", likesCount: 15 },
+        { id: 3, message: "Vlad", likesCount: 5 },
       ],
       newPostText: "it-kamasutra",
     },
@@ -18,8 +18,8 @@ let store = {
     dialogsPage: {
       messages: [
         { id: 1, message: "Hi" },
-        { id: 2, message: "Yo" },
-        { id: 3, message: "Nihao" },
+        { id: 2, message: "How are you?" },
+        { id: 3, message: "What are you doing today?" },
       ],
 
       dialogs: [

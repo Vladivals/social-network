@@ -35,9 +35,8 @@ const MyPosts = React.render = (props) => {
   
   
 
-  console.log("render yo")
   let postsElements = props.posts.map((p) => (
-    <Post message={p.message} likesCount={p.likesCount} />
+    <Post message={p.message} likesCount={p.likesCount} profile={props.profile}/>
   ));
 
 let newPostElement = React.createRef();

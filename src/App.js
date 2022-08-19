@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-
+import './App.css';
 import { Route, Routes } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -36,6 +36,7 @@ class App extends React.Component {
           <div className="app-wrapper-content">
           <Suspense fallback={<Preloader/>}>
             <Routes>
+              <Route path="/" element={<ProfileContainer />} />
               <Route path="/dialogs" element={<DialogsContainer />} />
               <Route path="/profile/:userId" element={<ProfileContainer />} />
               <Route path="/profile/" element={<ProfileContainer />} />

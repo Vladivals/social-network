@@ -29,14 +29,14 @@ const onStatusChange = (e) => {
   }
 
   return (
-    <div>
+    <div className={s.status}>
       { !editMode &&
-        <div>
+        <div >
           <b>Status: </b><span onDoubleClick={activateMode}>{props.status}</span>
         </div>
       }
       { editMode && (
-        <div>
+        <div >
           <input
             autoFocus={true}
             onBlur={deactivateEditMode}

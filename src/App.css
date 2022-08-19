@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+
 .app-wrapper {
   display: grid ;
 
@@ -5,7 +9,7 @@
   "h h"
   "n c";
 
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 8y0px 1fr;
   grid-template-columns: 2fr 10fr;
 }
 
@@ -15,6 +19,15 @@
   grid-area: c;
   background-color: honeydew;
 }
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
 
 
 

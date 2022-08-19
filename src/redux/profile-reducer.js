@@ -11,13 +11,14 @@ const SAVE_PROFILE_SUCCESS = "SAVE_PROFILE_SUCCESS"
 
 let initialState = {
   posts: [
-    { id: 1, message: "Hifdgdf", likesCount: 12 },
-    { id: 2, message: "Yodfgdf", likesCount: 15 },
-    { id: 3, message: "Nihaodfgdf", likesCount: 5 },
+    { id: 1, message: "Today is an amazing day!", likesCount: 12 },
+    { id: 2, message: "Gonna spend this week with my friends", likesCount: 15 },
+    { id: 3, message: "Hi!", likesCount: 5 },
   ],
   newPostText: "it-kamasutra",
   profile: null,
   status: '',
+  photos:'',
 };
 
 export const profileReducer = (state = initialState, action) => {
