@@ -6,6 +6,7 @@ import Message from "./Message/Messages";
 import { AddMessageFormRedux } from "./Message/addMessageForm";
 
 
+
 const Dialogs = (props) => {
   let state = props.dialogsPage;
 

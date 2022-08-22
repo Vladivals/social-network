@@ -1,4 +1,6 @@
+
 const sendMessage = "SEND-MESSAGE";
+
 
 let initialState = {
   messages: [
