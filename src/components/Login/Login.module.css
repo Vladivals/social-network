@@ -1,0 +1,61 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.loginCard {
+  padding: 24px;
+  width: 380px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-radius: 8px;
+}
+
+.loginCard input {
+  border: 1px solid #e0e0e0;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 20px;
+  outline: none;
+  font-size: 15px;
+  color: #808080;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  font-weight: 400;
+  border-radius: 6px;
+  margin-top: 16px
+}
+
+.loginCard span {
+  color: red;
+}
+
+.rememberMe {
+  margin: 16px 0;
+}
+
+.rememberMe div {
+  display: flex;
+  align-items: center;
+}
+
+.rememberMe input {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+
+.button {
+  width: 100%;
+}
+
+.error {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}

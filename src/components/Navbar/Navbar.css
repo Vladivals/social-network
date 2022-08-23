@@ -1,6 +1,5 @@
-
 .navbar {
-  background-color: #060b26;
+  background-color: none;
   height: 80px;
   width: 250px;
   display: flex;
@@ -16,8 +15,12 @@
   background: none;
 }
 
+.menu-bars svg {
+  color: #585757 !important;
+}
+
 .nav-menu {
-  background-color: #060b26;
+  background-color: #FFFF;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -40,22 +43,29 @@
   padding: 8px 0px 8px 16px;
   list-style: none;
   height: 60px;
+  cursor: pointer;
 }
 
 .nav-text a {
   text-decoration: none;
-  color: #f5f5f5;
-  font-size: 18px;
+  color: #585757;
+  font-size: 16px;
   width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+  font-weight: 600;
 }
 
 .nav-text a:hover {
-  background-color: #1a83ff;
+  background-color: #f3f4f6;
+}
+
+.nav-text svg {
+  color: #585757 !important;
+  font-size: 20px;
 }
 
 .nav-menu-items {
@@ -63,7 +73,7 @@
 }
 
 .navbar-toggle {
-  background-color: #060b26;
+  background-color: #FFFF;
   width: 100%;
   height: 80px;
   display: flex;
@@ -71,6 +81,28 @@
   align-items: center;
 }
 
-span {
-  margin-left: 16px;
+
+
+.nav-profile svg {
+  color: #2563eb !important;
+}
+
+.nav-messages svg {
+  color: #f59e0b !important;
+}
+
+.nav-users svg {
+  color: #ef4444 !important;
+}
+
+.nav-news svg {
+  color: #3b82f6 !important;
+}
+
+.nav-music svg {
+  color: #10b981 !important;
+}
+
+.nav-settings svg {
+  color: #2563eb !important;
 }

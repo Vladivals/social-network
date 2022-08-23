@@ -1,10 +1,55 @@
+.profileInfoWrapper {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  border-radius: 8px;
+  background: #FFF;
+  padding: 10px;
+  margin: 0 10px;
+}
+
 .descriptionBlock {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
- 
+
 .mainPhoto {
-  max-height: 100px;
-  max-width: 100px
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin: 20px auto;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.mainPhoto input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.01;
+  cursor: pointer;
+}
+
+.mainPhoto svg {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 50px;
+  color: #FFFF;
+  transition: all .5s;
+}
+
+.mainPhoto:hover {
+  opacity: 0.8;
+}
+
+.mainPhoto:hover svg {
+  opacity: 1;
 }
 
 .contact {
@@ -12,6 +57,74 @@
 }
 
 .status {
+  background: rgba(243, 244, 246, 1);
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+  height: auto;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(191, 191, 191);
+}
 
-border: 2px solid grey;
+.status input {
+  border-radius: 5px;
+  height: 100%;
+}
+
+.profileName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.profileName span {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #464646;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.profileInfo {
+  color: #9c9c9c;
+  text-align: center;
+}
+
+.item {
+  margin-top: 10px;
+}
+
+.lookingForAJob {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.saveBtn {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.saveBtn button {
+  width: 100%;
+}
+
+.profileEditform input,
+.profileEditform textarea {
+  background: rgba(243, 244, 246, 1);
+  border: none;
+  outline: none;
+  resize: none;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

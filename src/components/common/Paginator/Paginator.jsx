@@ -1,7 +1,7 @@
 import { useState } from "react";
 import s from "./Paginator.module.css";
 import cn from "classnames";
-
+import arrow from "../../../assets/images/nextArrow.svg";
 
 let Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10 }) => {
   let pagesCount = Math.ceil(totalItemsCount / pageSize);
@@ -19,30 +19,40 @@ let Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portio
 
 
 
-  return  <div className={s.paginator}> 
-  
+  return <div className={s.paginator}>
+
     {portionNumber > 1 &&
-    <button onClick={() => {setPortionNumber(portionNumber - 1) }}>PREV</button>
+      <button
+        onClick={() => { setPortionNumber(portionNumber - 1) }}
+        className={`${s.nextBackBtn} ${s.backBtn}`}
+      >
+        <img src={arrow} alt="" />
+      </button>
     }
     {pages
-        .filter(p => p >= leftPortionPageNumber && p<= rightPortionPageNumber)
-        .map((p) => {
-        return <span className={ cn({
-              [s.selectedPage]: currentPage === p
-          }, s.pageNumber)}
-            key={p}
-            onClick={(e) => {
-              onPageChanged(p);
-            }}>
-            {p}
-          </span> 
-     })}
-        
-         
-      {portionCount > portionNumber &&
-    <button onClick={() => { setPortionNumber(portionNumber + 1) }}>next</button>}
-    </div>
-  
+      .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
+      .map((p) => {
+        return <span className={cn({
+          [s.selectedPage]: currentPage === p
+        }, s.pageNumber)}
+          key={p}
+          onClick={(e) => {
+            onPageChanged(p);
+          }}>
+          {p}
+        </span>
+      })}
+
+
+    {portionCount > portionNumber &&
+      <button
+        onClick={() => { setPortionNumber(portionNumber + 1) }}
+        className={s.nextBackBtn}
+      >
+        <img src={arrow} alt="" />
+      </button>}
+  </div>
+
 };
 
 export default Paginator;

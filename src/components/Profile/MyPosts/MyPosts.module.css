@@ -1,7 +1,48 @@
 .postsBlock {
   padding: 10px;
 }
- 
+
 .posts {
   margin-top: 10px;
+}
+
+.addPostCard {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  border-radius: 8px;
+  padding: 16px;
+  background: #FFF;
+  display: flex;
+  align-items: baseline;
+}
+
+.addPostCardForm {
+  width: 100%;
+}
+
+.addPostCardForm textarea {
+  background: rgba(243, 244, 246, 1);
+  margin-left: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  height: auto;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.addPostCardForm textarea:focus {
+  background: rgba(229, 231, 235, 1);
+}
+
+.addPostCardForm span {
+  color: red;
+}
+
+.addPostCardFormFooter {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }

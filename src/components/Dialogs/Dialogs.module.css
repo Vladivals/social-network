@@ -1,12 +1,72 @@
 .dialogs {
   display: grid;
-  grid-template-columns: 2fr 10fr;
-  
+  grid-template-columns: 3fr 10fr;
+  min-height: 90vh;
+}
+
+@media(max-width: 500px) {
+  .dialogs {
+    grid-template-columns: 1fr;
+  }
+
+  .dialogsContent {
+    height: 200px;
+    overflow-y: auto;
+  }
 }
 
 .dialogsItems {
+  border: 1px solid #eaeaea;
+}
+
+.dialogsItemsHeader {
+  font-size: 20px;
+  padding: 20px;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.dialogsContent {
+  padding: 20px 10px;
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
   padding: 10px;
-  color: white;
+  border-radius: 8px;
+}
+
+.dialog:hover {
+  background: rgba(243, 244, 246, 1);
+}
+
+.dialog a {
+  margin-left: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dialog span {
+  margin-left: 10px;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: inline-block;
+  line-height: 25px;
+}
+
+.dialogMine {
+  flex-direction: row-reverse;
+}
+
+.dialogMine span {
+  background: #2a41e8;
+  color: #FFFF;
+  margin: 0 10px 0 0;
 }
 
 .dialogsItems .active {
@@ -14,11 +74,53 @@
 }
 
 .messages {
-  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-left: none;
+}
+
+.messagesContent {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+.messagesContentMessages {
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .messages .message {
   color: white;
+}
+
+.addMessageForm {
+  width: 100%;
+}
+
+.addMessageForm div {
+  width: 100%;
+}
+
+.addMessageForm textarea {
+  background: rgba(243, 244, 246, 1);
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  height: auto;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.addMessageFormFooter {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 10px;
 }
 
 .userPhoto {

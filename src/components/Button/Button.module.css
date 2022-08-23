@@ -1,0 +1,27 @@
+.button {
+  height: 35px;
+  border-radius: .375rem;
+  color: #fff;
+  background: rgba(37, 99, 235, 1);
+  transition: all .3s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px 1.25rem;
+}
+
+.button:hover {
+  background: rgba(37, 99, 235, 0.8);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.grey {
+  background: gray;
+}
+
+.grey:hover {
+  background: rgb(72, 72, 72);
+}

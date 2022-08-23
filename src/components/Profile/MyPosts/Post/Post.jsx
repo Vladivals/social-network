@@ -1,27 +1,23 @@
 import React from "react";
 import s from "./Post.module.css";
 import likeImg from "../../../../assets/images/like.png";
-import userPhoto from "../../../../assets/images/user.png";
+import Avatar from "../../../Avatar/Avatar";
 
 
 const Post = (props) => {
 
-
-
-
-
   return (
-    <div>
+    <div className={s.postWrapper}>
       <div className={s.item}>
-        <img src={userPhoto }></img>
+        <Avatar avatar={props.profile?.photos?.small} />
         {props.message};
       </div>
-      <div>
+      <div className={s.footer}>
         <div className={s.like}>
-          <img src={likeImg} /> 
+          <img src={likeImg} alt="likeImg" />
           {props.likesCount}
-          </div>
-        
+        </div>
+
       </div>
     </div>
   );

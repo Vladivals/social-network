@@ -1,11 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Avatar from "../../Avatar/Avatar";
 import s from "./../Dialogs.module.css";
 
 
 
-const Message = (props) => {
-  return <div className={s.dialog}>{props.message}</div>;
+const Message = ({ message, isOwner, profileAvatar }) => {
+  return (
+    <div className={`${s.dialog} ${isOwner && s.dialogMine}`}>
+      <Avatar avatar={isOwner && profileAvatar} />
+      <span>{message}</span>
+    </div>
+  )
 };
 
 

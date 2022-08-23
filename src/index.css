@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: #808080;
+  background: #f9fafb;
 }
 
 code {
@@ -12,8 +15,13 @@ code {
     monospace;
 }
 
+input,
+textarea {
+  color: #808080;
+}
+
 .wrapper {
   padding-top: 5rem;
   margin: 0 auto;
-  width: 600px ;
+  width: 600px;
 }
