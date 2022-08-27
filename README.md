@@ -1,4 +1,4 @@
-# Social-network
+# Social-network using React
 
 A live version of the application here: https://vladivals.github.io/social-network/#/
 
